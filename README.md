@@ -110,4 +110,15 @@ Ok - so this is a very WIP project. The underlying tech we're aiming for is to s
 - NATs
 
 
-To start, you cn use the example app in here. It is an example of how we can use the Spud CMS.
+## Todo
+
+- setup a working http server
+- setup admin + user routing w/ some basic things
+- setup templ in both apps
+- setup datastar in both apps
+- setuop some kind of css
+- define the db config
+- determine how we want to do migrations, syncing, etc.
+  - look into payload
+  - look into ash
+  -

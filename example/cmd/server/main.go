@@ -8,12 +8,15 @@ import (
 )
 
 func main() {
-	// setup our db
 	// setup our logger
 	// get our env config
-	app := spud.NewApp("admin", "db.sqlite")
-	app.Port = 8080
-	app.Host = "0.0.0.0"
+
+	app := spud.NewApp("/admin",
+		spud.WithPort(8080),
+		spud.WithHost("0.0.0.0"),
+		spud.WithSQLite("./spud.db"),
+		spud.WithMode(spud.Production),
+	)
 
 	// setup an errgroup to run and ensure we can close
 	if err := app.Run(); err != nil {
